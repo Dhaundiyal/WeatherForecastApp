@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-image: url("C:/Users/DELL/Desktop/Websites/WeatherApp/images/background.jpg"); */
+  background-color: rgb(93, 150, 200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-container {
+  min-height: 100vh; /* This makes sure it covers at least the full viewport */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  transition: background 1s ease-in-out;
+  position: relative;
+}
+
+/* Add this to prevent background cutoff */
+.weather-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 24px;
+  color: #1e2432;
+}
+
+.city-input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.search-button {
+  width: 100px;
+  height: 100px;
+  border: none;
+  border-radius: 8px;
+  background-color: #84cef5;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-button:hover {
+  background-color: #62b3e0;
+}
+
+.error-message {
+  color: #f06789;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.weather-details {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e2432;
+}
+
+.temperature {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1e2432;
+}
+
+.wind {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+}
+
+.forecast-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.forecast-day {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  color: #1e2432;
+}
+
+.forecast-date {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #1e2432;
+}
